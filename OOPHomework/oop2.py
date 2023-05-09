@@ -7,7 +7,7 @@ class Clasa1:
         self.culoare = culoare
 
     def AfisareCuloare(self):
-        print("Culoarea mașinii este:", self.culoare)
+        print("Culoarea masinii este:", self.culoare)
 
 
 class Clasa2(Clasa1):
