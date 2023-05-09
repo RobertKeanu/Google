@@ -22,7 +22,7 @@ class Clasa3(Clasa1):
 
 obiect1 = Clasa2("ARO", "M461")
 obiect1.adauga_scaune_incalzite("Nu")
-obiect1.accepta_culoare("Roșu")
+obiect1.accepta_culoare("Rosu")
 obiect2 = Clasa3("Dacia", "1310")
 obiect2.adauga_blocuri_optice_led("Nu")
 obiect2.accepta_culoare("Negru")
