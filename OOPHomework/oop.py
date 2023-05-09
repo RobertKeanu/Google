@@ -12,10 +12,11 @@ class Catalog:
         self.absente += 1
 
     def decrement_absente(self,scutiri):
-        if type(scutiri) == int:
-            self.absente -= scutiri
-        else:
-            return "Numar de scutiri invalid!"
+        try:
+            if type(scutiri) == int:
+                self.absente -= scutiri
+        except:
+            print ("Numar de scutiri invalid!")
 
 class Extensie1(Catalog):
     def __init__(self, nume, prenume):
@@ -51,9 +52,9 @@ for i in range(4):
     student2.incrementare_absente()
 # print(student2)
 student2.decrement_absente(2)
-# print(student2)
-# print(student1)
-# print(student2)
+print(student2)
+print(student1)
+print(student2)
 student1.adaugare_in_dictionar("Python",[5,6,8])
 student2.adaugare_in_dictionar("Python",[3,6,9])
 student2.adaugare_in_dictionar("Matematica",[2,5,2])
