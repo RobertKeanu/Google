@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% if perms.user_profile.add_pontaj %}
     <a class="btn btn-primary" href="{% url 'locations:adauga' %}">Adaugare locatii</a>
+    {% endif %}
     <table class="table">
     <thead>
     <tr>
@@ -23,8 +25,8 @@
             Inactive
             {% endif %}</td>
         <td><a class="btn btn-success" href="{% url 'locations:modifica' item.id %}">Edit</a>
+            <a class="btn btn-danger" href="{% url 'locations:sterge' item.id %}?page={{ page }}">Delete</a>
             {% if item.active is True %}
-                <a class="btn btn-danger" href="{% url 'locations:sterge' item.id %}?page={{ page }}">Delete</a>
                 <a class="btn btn-info" href="{% url 'locations:dezactiveaza' item.id %}?page={{ page }}">Deactivate</a>
             {% else %}
                  <a class="btn btn-success" href="{% url 'locations:activeaza' item.id %}?page={{ page }}">Activate</a>
